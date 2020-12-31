@@ -1,7 +1,10 @@
 name = "my-website"
 type = "webpack"
-account_id = ""
+account_id = "" # put your account_id here
 workers_dev = true
 route = ""
 zone_id = ""
 webpack_config = "webpack.config.js"
+kv_namespaces = [ 
+  { binding = "FILES", preview_id = "" } # set your preview_id here
+]

@@ -11,7 +11,9 @@
     "lint": "eslint",
     "preview": "wrangler preview --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "marked": "^1.2.7"
+  },
   "devDependencies": {
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",

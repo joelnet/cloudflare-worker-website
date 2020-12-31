@@ -10,3 +10,5 @@ extends:
   - 'plugin:prettier/recommended'
 rules:
   indent: ['error', 'tab']
+globals:
+  FILES: readonly
