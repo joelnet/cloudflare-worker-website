@@ -2,6 +2,8 @@ import { fetchPerson } from '../api'
 import { objectToTable } from '../lib/objectToTable'
 import { htmlResponse } from '../lib/responses'
 
+export const route = '/people/.+'
+
 const person = async request => {
 	const url = new URL(request.url)
 	const id = url.pathname.substring(8)

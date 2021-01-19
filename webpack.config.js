@@ -1,7 +1,11 @@
+const glob = require('glob')
+
+const files = glob.sync('./src/pages/**/*.js')
+
 module.exports = {
 	target: 'webworker',
 	context: __dirname,
-	entry: './src/index.js',
+	entry: files.concat(['./src/index.js']),
 	mode: 'development',
 	devtool: 'cheap-module-source-map',
 	module: {

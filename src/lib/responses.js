@@ -10,3 +10,8 @@ export const notFoundResponse = () =>
 		headers: { 'content-type': 'text/html' },
 		status: 404,
 	})
+
+export const textResponse = text =>
+	new Response(text, {
+		headers: { 'content-type': 'text/plain' },
+	})
