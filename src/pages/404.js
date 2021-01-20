@@ -1,5 +1,5 @@
-import { notFoundResponse } from '../lib/responses'
+import * as response from '../lib/responses'
 
-const notFound = () => notFoundResponse()
+const notFound = () => response.notFound()
 
 export default notFound

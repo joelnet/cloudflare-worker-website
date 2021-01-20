@@ -1,7 +1,7 @@
-import { textResponse } from '../lib/responses'
+import * as response from '../lib/responses'
 
 export const route = '/status/?'
 
-const status = () => textResponse('OK')
+const status = () => response.text('OK')
 
 export default status

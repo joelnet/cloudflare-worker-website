@@ -1,8 +1,8 @@
 import index from '../../html/index.html'
-import { htmlResponse } from '../lib/responses'
+import * as response from '../lib/responses'
 
 export const route = '/'
 
-const home = () => htmlResponse(index)
+const home = () => response.html(index)
 
 export default home

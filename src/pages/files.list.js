@@ -1,4 +1,4 @@
-import { htmlResponse } from '../lib/responses'
+import * as response from '../lib/responses'
 
 export const route = '/files/?'
 
@@ -12,7 +12,7 @@ const fileList = async () => {
 	const files = await FILES.list()
 	const lis = files.keys.map(fileToLi).join('')
 	const html = `<ul>${lis}</ul>`
-	return htmlResponse(html)
+	return response.html(html)
 }
 
 export default fileList

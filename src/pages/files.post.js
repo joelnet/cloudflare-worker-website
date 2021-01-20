@@ -1,4 +1,4 @@
-import { htmlResponse } from '../lib/responses'
+import * as response from '../lib/responses'
 
 export const route = '/files/?'
 export const method = 'post'
@@ -6,7 +6,7 @@ export const method = 'post'
 const filePost = async request => {
 	const { filename, contents } = await request.json()
 	await FILES.put(filename, contents)
-	return htmlResponse('SUCCESS')
+	return response.html('SUCCESS')
 }
 
 export default filePost

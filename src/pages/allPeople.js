@@ -1,5 +1,5 @@
 import { fetchAllPeople } from '../api'
-import { htmlResponse } from '../lib/responses'
+import * as response from '../lib/responses'
 
 export const route = '/people/?'
 
@@ -10,7 +10,7 @@ const allPeople = async () => {
 	const { results } = await fetchAllPeople()
 	const persons = results.map(personToLi)
 	const html = `<ul>${persons.join('')}</ul>`
-	return htmlResponse(html)
+	return response.htmlResponse(html)
 }
 
 export default allPeople

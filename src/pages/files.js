@@ -1,5 +1,5 @@
 import marked from 'marked'
-import { htmlResponse } from '../lib/responses'
+import * as response from '../lib/responses'
 
 export const route = '/files/.+'
 
@@ -9,7 +9,7 @@ const filePost = async request => {
 	const id = url.pathname.substring(7)
 	const file = await FILES.get(id)
 	const html = marked(file)
-	return htmlResponse(html)
+	return response.html(html)
 }
 
 export default filePost
