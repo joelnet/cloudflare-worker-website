@@ -1,13 +1,10 @@
 import marked from 'marked'
 import * as response from '../lib/responses'
 
-export const route = '/files/.+'
+export const route = '/files/(?<id>.+)'
 
-const filePost = async request => {
-	console.log({ request })
-	const url = new URL(request.url)
-	const id = url.pathname.substring(7)
-	const file = await FILES.get(id)
+const filePost = async ({ params }) => {
+	const file = await FILES.get(params.id)
 	const html = marked(file)
 	return response.html(html)
 }

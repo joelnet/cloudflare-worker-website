@@ -19,6 +19,7 @@ const Path = regExp => req => {
 	const url = new URL(req.url)
 	const path = url.pathname
 	const match = path.match(regExp) || []
+	req.params = match && match.groups ? match.groups : {}
 	return match[0] === path
 }
 
