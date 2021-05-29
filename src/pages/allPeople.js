@@ -10,7 +10,7 @@ const allPeople = async () => {
 	const { results } = await fetchAllPeople()
 	const persons = results.map(personToLi)
 	const html = `<ul>${persons.join('')}</ul>`
-	return response.htmlResponse(html)
+	return response.html(html)
 }
 
 export default allPeople
