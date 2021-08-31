@@ -1,13 +1,5 @@
 # 👷 Cloudflare Worker Website Template
 
-A template for kick starting a Cloudflare worker website.
+This project is to support a series of YouTube videos I made here:
 
-#### Wrangler
-
-To generate using [wrangler](https://github.com/cloudflare/wrangler)
-
-```
-wrangler generate projectname https://github.com/joelnet/cloudflare-worker-website
-```
-
-Further documentation for Wrangler can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
+https://www.youtube.com/playlist?list=PL59tadyXaIqXkyNIPEgXAZqeyPgQjxxM3
